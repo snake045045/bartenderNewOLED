@@ -7,6 +7,31 @@ import RPi.GPIO as GPIO
 import json
 import traceback
 
+## Tkinter test
+from tkinter import *
+import tkinter.font
+
+## GUI Definitions
+win = Tk()
+win.title("Bartender HMI")
+myFont = tkinter.font.Font(family = 'Helvetica', size = 12, weight = "bold")
+
+def knap1():
+    self.btn1Pin = False
+
+def knap2():
+    self.btn2Pin = False
+
+
+## Widgets
+ledButton = Button(win, text = 'Knap 1', font = myFont, comman = knap1)
+ledButton.grid(row=0,column=1)
+
+ledButton2 = Button(win, text = 'Knap 2', font = myFont, comman = knap2)
+ledButton2.grid(row=1,column=1)
+
+
+
 from lib_oled96 import ssd1306
 from smbus import SMBus
 from PIL import ImageFont, ImageDraw, Image
